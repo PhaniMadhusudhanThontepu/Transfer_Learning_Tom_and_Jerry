@@ -80,12 +80,8 @@ def gif_to_jpg():
     for file in files:
         file_path = path.join(raw_data_path,file)
         im = Image.open(file_path)
-        try:
-            frames = [frame.copy() for frame in ImageSequence.Iterator(im)]
-        except Exception as e:
-            print(e)
-       
-        for frame in frames:
+             
+        for frame in ImageSequence.Iterator(im):
             #Incrementing the counter
             global file_naming_counter
             file_naming_counter +=1
@@ -172,6 +168,8 @@ def mp4_to_jpg():
     for file in files:
         file_path = path.join(raw_data_path,file)
         video = cv2.VideoCapture(file_path)
+        fps = int(video.get(cv2.CAP_PROP_FPS))
+        
         while True:
           ret,frame = video.read()
           if ret:
@@ -182,7 +180,8 @@ def mp4_to_jpg():
               
               new_file_name = str(file_naming_counter)+'.jpg'
               destination_path = path.join(processed_images_path,new_file_name)
-              cv2.imwrite(destination_path, frame)        
+              if file_naming_counter%fps==0:
+                  cv2.imwrite(destination_path, frame)        
           else:
               break
           
@@ -218,21 +217,21 @@ def webp_to_jpg():
         
         
 for file_extenstion in file_extenstions:
-    print(file_extenstion)
+    #print(file_extenstion)
     if file_extenstion == 'jpg':
-        pass
-        #jpg_to_jpg()
+        #pass
+        jpg_to_jpg()
     elif file_extenstion == 'gif':
         #pass
         gif_to_jpg()
     elif file_extenstion == 'png':
-        pass
-        #png_to_jpg()
+        #pass
+        png_to_jpg()
     elif file_extenstion == 'jfif':
-        pass
-        #jfif_to_jpg()
+        #pass
+        jfif_to_jpg()
     elif file_extenstion == 'mp4':
-        pass
-        #mp4_to_jpg()
+        #pass
+        mp4_to_jpg()
     else:
         print('This file format cannot be converted into images :- ',file_extenstion)
