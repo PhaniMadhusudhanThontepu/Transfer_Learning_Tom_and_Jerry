@@ -1,0 +1,26 @@
+<annotation>
+	<folder>processed_images</folder>
+	<filename>205.jpg</filename>
+	<path>E:\Repositories\transfer_learning_tom_and_jerry\data\tom_images\processed_images\205.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>320</width>
+		<height>213</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>tom</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>86</xmin>
+			<ymin>18</ymin>
+			<xmax>209</xmax>
+			<ymax>183</ymax>
+		</bndbox>
+	</object>
+</annotation>

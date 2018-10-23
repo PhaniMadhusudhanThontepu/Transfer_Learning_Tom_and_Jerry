@@ -7,8 +7,8 @@ from os.path import isfile, join
 import json
 
 #Paths
-raw_data_path = path.abspath(r'..\\..\\data\\tom_images\\raw_data\\')
-meta_data_path = path.abspath(r'..\\..\\data\\meta_data\\')
+raw_data_path = path.abspath(r'E:\\Repositories\\transfer_learning_tom_and_jerry\\data\\jerry_images\\raw_data\\')
+meta_data_path = path.abspath(r'E:\\Repositories\\transfer_learning_tom_and_jerry\\data\\meta_data\\list_of_files.json')
 
 #Creating a dictionary for saving file names
 list_of_files = dict()
@@ -32,5 +32,5 @@ for file_extension in file_extensions:
 list_of_files_json = json.dumps(list_of_files)
 
 #Writing the JSON String to a json file
-with open(meta_data_path +'list_of_files.json', 'w') as f:
+with open(meta_data_path , 'w') as f:
     json.dump(list_of_files_json, f)

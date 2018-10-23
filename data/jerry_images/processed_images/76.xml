@@ -1,0 +1,26 @@
+<annotation>
+	<folder>processed_images</folder>
+	<filename>76.jpg</filename>
+	<path>E:\Repositories\transfer_learning_tom_and_jerry\data\jerry_images\processed_images\76.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>484</width>
+		<height>344</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>jerry</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>151</xmin>
+			<ymin>219</ymin>
+			<xmax>224</xmax>
+			<ymax>296</ymax>
+		</bndbox>
+	</object>
+</annotation>

@@ -11,8 +11,8 @@ from PIL import Image, ImageSequence
 
 #Paths
 meta_data_path = path.abspath(r'..\\..\\data\\meta_data\\')
-raw_data_path = path.abspath(r'..\\..\\data\\tom_images\\raw_data\\')
-processed_images_path = path.abspath(r'..\\..\\data\\tom_images\\processed_images\\')
+raw_data_path = path.abspath(r'..\\..\\data\\jerry_images\\raw_data\\')
+processed_images_path = path.abspath(r'..\\..\\data\\jerry_images\\processed_images\\')
 
 #Reading JSON File
 with open(meta_data_path +'list_of_files.json', 'r') as f:
